@@ -1,0 +1,2 @@
+exports['forms full error message 1'] = "----------\nerror description\nour solution\n----------\n\nexception message\n\n----------\nPlatform: name\nVersion: number"
+

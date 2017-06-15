@@ -69,6 +69,15 @@
     "mocha": "3.4.2",
     "nsp": "2.6.3",
     "pre-git": "3.15.0",
+    "snap-shot": "2.17.0",
     "standard": "10.0.2"
+  },
+  "dependencies": {
+    "check-more-types": "2.24.0",
+    "common-tags": "1.4.0",
+    "getos": "3.0.1",
+    "lazy-ass": "1.6.0",
+    "pify": "3.0.0",
+    "ramda": "0.24.1"
   }
 }
