@@ -1,6 +1,6 @@
 # @cypress/error-message
 
-> Uniform error display in the terminal
+> User-friendly error text with additional information
 
 [![NPM][npm-icon] ][npm-url]
 

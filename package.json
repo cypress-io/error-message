@@ -1,6 +1,6 @@
 {
   "name": "@cypress/error-message",
-  "description": "Uniform error display in the terminal",
+  "description": "User-friendly error text with additional information",
   "version": "0.0.0-development",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "bugs": "https://github.com/cypress-io/error-message/issues",
