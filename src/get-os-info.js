@@ -28,7 +28,7 @@ function getPlatformInfo () {
 }
 
 const platformRegex = /Platform: \w+/
-const versionRegex = /Version: [\w.]+/
+const versionRegex = /Version: [\w. -]+/
 
 module.exports = {
   getOsVersion,

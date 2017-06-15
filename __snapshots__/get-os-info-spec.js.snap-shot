@@ -1,0 +1,4 @@
+exports['can replace mac version 1'] = "a version"
+
+exports['can replace linux version 1'] = "a version"
+
