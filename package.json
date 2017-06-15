@@ -1,9 +1,9 @@
 {
-  "name": "@cypress/cypress-terminal-error-render",
+  "name": "@cypress/error-message",
   "description": "Uniform error display in the terminal",
   "version": "0.0.0-development",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
-  "bugs": "https://github.com/cypress-io/cypress-terminal-error-render/issues",
+  "bugs": "https://github.com/cypress-io/error-message/issues",
   "config": {
     "pre-git": {
       "commit-msg": "simple",
@@ -30,7 +30,7 @@
   "files": [
     "lib/*.js"
   ],
-  "homepage": "https://github.com/cypress-io/cypress-terminal-error-render#readme",
+  "homepage": "https://github.com/cypress-io/error-message#readme",
   "keywords": [
     "error",
     "exception",
@@ -45,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cypress-io/cypress-terminal-error-render.git"
+    "url": "https://github.com/cypress-io/error-message.git"
   },
   "scripts": {
     "ban": "ban",

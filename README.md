@@ -1,4 +1,4 @@
-# @cypress/cypress-terminal-error-render
+# @cypress/error-message
 
 > Uniform error display in the terminal
 
@@ -13,13 +13,13 @@
 Requires [Node](https://nodejs.org/en/) version 0.12 or above.
 
 ```sh
-npm install --save @cypress/cypress-terminal-error-render
+npm install --save @cypress/error-message
 ```
 
 Load the function from the module
 
 ```js
-const {formErrorText} = require('@cypress/cypress-terminal-error-render')
+const {formErrorText} = require('@cypress/error-message')
 ```
 
 ## Use
@@ -77,7 +77,7 @@ doMyStuff()
 ### Small print
 
 Support: if you find any problems with this module, email / tweet /
-[open issue](https://github.com/cypress-io/cypress-terminal-error-render/issues) on Github
+[open issue](https://github.com/cypress-io/error-message/issues) on Github
 
 ## MIT License
 
@@ -104,10 +104,10 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-[npm-icon]: https://nodei.co/npm/@cypress/cypress-terminal-error-render.svg?downloads=true
-[npm-url]: https://npmjs.org/package/@cypress/cypress-terminal-error-render
-[ci-image]: https://travis-ci.org/cypress-io/cypress-terminal-error-render.svg?branch=master
-[ci-url]: https://travis-ci.org/cypress-io/cypress-terminal-error-render
+[npm-icon]: https://nodei.co/npm/@cypress/error-message.svg?downloads=true
+[npm-url]: https://npmjs.org/package/@cypress/error-message
+[ci-image]: https://travis-ci.org/cypress-io/error-message.svg?branch=master
+[ci-url]: https://travis-ci.org/cypress-io/error-message
 [semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-url]: https://github.com/semantic-release/semantic-release
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
