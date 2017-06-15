@@ -25,11 +25,10 @@
     }
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=0.12"
   },
   "files": [
-    "src/*.js",
-    "!src/*-spec.js"
+    "lib/*.js"
   ],
   "homepage": "https://github.com/cypress-io/cypress-terminal-error-render#readme",
   "keywords": [
@@ -40,7 +39,7 @@
     "util"
   ],
   "license": "MIT",
-  "main": "src/",
+  "main": "lib/",
   "publishConfig": {
     "registry": "http://registry.npmjs.org/"
   },
@@ -58,9 +57,12 @@
     "secure": "nsp check",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",
     "test": "npm run unit",
-    "unit": "mocha src/*-spec.js"
+    "unit": "mocha src/*-spec.js",
+    "build": "babel src -d lib"
   },
   "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-preset-es2015": "6.24.1",
     "ban-sensitive-files": "1.9.0",
     "dependency-check": "2.9.0",
     "deps-ok": "1.2.0",
