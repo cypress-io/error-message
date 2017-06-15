@@ -38,8 +38,9 @@ const fileSaveError = {
   `
 }
 fs.writeFile(name)
-  .catch(formErrorText(info))
-  .then(console.error)
+  .catch(
+    formErrorText(info).then(console.error)
+  )
 /*
   shows nice error message
 
@@ -68,7 +69,9 @@ const badError = {
   printStack: true
 }
 doMyStuff()
-  .catch(formErrorText(badError))
+  .catch(
+    formErrorText(badError).then(console.error)
+  )
 ```
 
 ### Small print
