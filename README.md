@@ -10,10 +10,16 @@
 
 ## Install
 
-Requires [Node](https://nodejs.org/en/) version 6 or above.
+Requires [Node](https://nodejs.org/en/) version 0.12 or above.
 
 ```sh
 npm install --save @cypress/cypress-terminal-error-render
+```
+
+Load the function from the module
+
+```js
+const {formErrorText} = require('@cypress/cypress-terminal-error-render')
 ```
 
 ## Use
@@ -67,16 +73,12 @@ doMyStuff()
 
 ### Small print
 
-Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2017
-
-License: MIT - do anything with the code, but don't blame me if it does not work.
-
 Support: if you find any problems with this module, email / tweet /
 [open issue](https://github.com/cypress-io/cypress-terminal-error-render/issues) on Github
 
 ## MIT License
 
-Copyright (c) 2017 Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt;
+Copyright (c) 2017 Cypress.io https://cypress.io
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
