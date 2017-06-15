@@ -20,20 +20,22 @@ const utils = {
   getPlatformInfo
 }
 
-function formErrorText (info, error) {
-  const hr = '----------'
-  return formError(info, error)
-  .then((extended) => stripIndents`
-    ${hr}
-    ${info.description}
-    ${info.solution}
-    ${hr}
+function formErrorText (info) {
+  return function onError (error) {
+    const hr = '----------'
+    return formError(info, error)
+    .then((extended) => stripIndents`
+      ${hr}
+      ${info.description}
+      ${info.solution}
+      ${hr}
 
-    ${extended.message}
-    ${extended.printStack ? extended.stack : ''}
-    ${hr}
-    ${extended.platform}
-  `)
+      ${extended.message}
+      ${info.printStack ? extended.stack : ''}
+      ${hr}
+      ${extended.platform}
+    `)
+  }
 }
 
 module.exports = {

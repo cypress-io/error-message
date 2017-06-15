@@ -18,6 +18,53 @@ npm install --save @cypress/cypress-terminal-error-render
 
 ## Use
 
+Think about all possible errors your application might encounter.
+Describe each one and suggest a solution the user should try in case this
+particular error happens. Then form the full message once the exception
+is caught and show it to the user
+
+```js
+const fileSaveError = {
+  description: 'We could not save an important file',
+  solution: `Please check folder permissions and try again
+
+    more details on our FAQ page: https://faq.company.name
+  `
+}
+fs.writeFile(name)
+  .catch(formErrorText(info))
+  .then(console.error)
+/*
+  shows nice error message
+
+  ------
+  We could not save an important file
+  Please check folder permissions and try again
+
+    more details on our FAQ page: https://faq.company.name
+
+  Exception message
+  ------
+  Platform: darwin
+  Version: 15.6.2
+*/
+```
+
+If you want to include the exception stack, pass `printStack` option in
+the `info` object. For example, a catch-all function should probably print
+stack to give you a good idea where the problem happens.
+
+```js
+const badError = {
+  description: 'Unexpected error happened',
+  solution: `Something terrible went wrong. Search issues on our
+    GitHub repo to find possible solution: https://github.com/company/repo`,
+  printStack: true
+}
+doMyStuff()
+  .catch(formErrorText(badError))
+```
+
 ### Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2017
