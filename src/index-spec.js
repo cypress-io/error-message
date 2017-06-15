@@ -44,4 +44,22 @@ describe('formErrorText', () => {
         .then(normalizeVersion)
     )
   )
+
+  describe('throws an error if', () => {
+    it('error is missing', () => {
+      la(is.raises(() => formErrorText(info)()))
+    })
+
+    it('error is not an exception', () => {
+      la(is.raises(() => formErrorText(info)('a problem')))
+    })
+
+    it('info is missing description', () => {
+      la(is.raises(() => formErrorText({solution: 'do something'})))
+    })
+
+    it('info is missing solution', () => {
+      la(is.raises(() => formErrorText({description: 'hmm'})))
+    })
+  })
 })

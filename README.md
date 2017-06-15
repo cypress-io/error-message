@@ -74,6 +74,9 @@ doMyStuff()
   )
 ```
 
+If `info` argument is missing a description or a solution, an error will be
+thrown.
+
 ### Small print
 
 Support: if you find any problems with this module, email / tweet /

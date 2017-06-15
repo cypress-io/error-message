@@ -3,6 +3,8 @@
 const { stripIndents } = require('common-tags')
 const { merge } = require('ramda')
 const {getOsVersion, getPlatformInfo} = require('./get-os-info')
+const la = require('lazy-ass')
+const is = require('check-more-types')
 
 function addPlatformInformation (info) {
   return getPlatformInfo()
@@ -20,8 +22,18 @@ const utils = {
   getPlatformInfo
 }
 
+const isInfo = is.schema({
+  description: is.unemptyString,
+  solution: is.unemptyString,
+  printStack: is.maybe.bool
+})
+
 function formErrorText (info) {
+  la(isInfo(info), 'invalid info object', info)
+
   return function onError (error) {
+    la(is.error(error), 'expected error object', error)
+
     const hr = '----------'
     return formError(info, error)
     .then((extended) => stripIndents`
