@@ -2,18 +2,18 @@
 
 const { stripIndents } = require('common-tags')
 const { merge } = require('ramda')
-const {getOsVersion, getPlatformInfo} = require('./get-os-info')
+const { getOsVersion, getPlatformInfo } = require('./get-os-info')
 const la = require('lazy-ass')
 const is = require('check-more-types')
 
 function addPlatformInformation (info) {
-  return getPlatformInfo()
-  .then((platform) => merge(info, { platform }))
+  return getPlatformInfo().then(platform => merge(info, { platform }))
 }
 
 function formError (info, error) {
-  return addPlatformInformation(info)
-  .then((info) => merge(info, { message: error.message, stack: error.stack }))
+  return addPlatformInformation(info).then(info =>
+    merge(info, { message: error.message, stack: error.stack })
+  )
 }
 
 const utils = {
@@ -35,8 +35,8 @@ function formErrorText (info) {
     la(is.error(error), 'expected error object', error)
 
     const hr = '----------'
-    return formError(info, error)
-    .then((extended) => stripIndents`
+    return formError(info, error).then(
+      extended => stripIndents`
       ${hr}
       ${info.description}
       ${info.solution}
@@ -46,7 +46,8 @@ function formErrorText (info) {
       ${info.printStack ? extended.stack : ''}
       ${hr}
       ${extended.platform}
-    `)
+    `
+    )
   }
 }
 

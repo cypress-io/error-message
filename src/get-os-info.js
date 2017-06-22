@@ -11,20 +11,19 @@ function formatOSVersion (osInfo) {
 
 function getOsVersion () {
   if (os.platform() === 'linux') {
-    return getos()
-    .then(formatOSVersion)
-    .catch(() => os.release())
+    return getos().then(formatOSVersion).catch(() => os.release())
   } else {
     return Promise.resolve(os.release())
   }
 }
 
 function getPlatformInfo () {
-  return getOsVersion()
-  .then((version) => stripIndent`
+  return getOsVersion().then(
+    version => stripIndent`
     Platform: ${os.platform()}
     Version: ${version}
-  `)
+  `
+  )
 }
 
 const platformRegex = /Platform: \w+/
