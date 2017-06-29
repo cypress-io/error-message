@@ -51,7 +51,16 @@ function formErrorText (info) {
   }
 }
 
+const raise = text => {
+  // makes error message "better" by starting it at a new line
+  throw new Error('\n' + text)
+}
+
+const throwDetailedError = info => error =>
+  formErrorText(info)(error).then(raise)
+
 module.exports = {
   utils,
-  formErrorText
+  formErrorText,
+  throwDetailedError
 }

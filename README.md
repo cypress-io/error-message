@@ -77,6 +77,26 @@ doMyStuff()
 If `info` argument is missing a description or a solution, an error will be
 thrown.
 
+## Re-throwing a detailed error
+
+You might not want to handle the error, but rather add details and rethrow
+it. For this there is a helper function
+
+```js
+const {throwDetailedError} = require('@cypress/error-message')
+const info = {
+  description: 'error description',
+  solution: 'our solution'
+}
+foo()
+  .catch(throwDetailedError(info))
+  // later catch this detailed error
+  .catch(err => {
+    // err has original exception + description and solution
+    console.error(err)
+  })
+```
+
 ### Small print
 
 Support: if you find any problems with this module, email / tweet /
