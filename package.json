@@ -11,6 +11,7 @@
         "npm prune",
         "npm run deps",
         "npm test",
+        "npm run build",
         "git add src/*.js",
         "npm run ban"
       ],
@@ -18,6 +19,7 @@
         "npm run secure",
         "npm run license",
         "npm run ban -- --all",
+        "npm run build",
         "npm run size"
       ],
       "post-commit": [],
