@@ -1,5 +1,5 @@
 const fs = require('fs')
-function foo() {
-  fs.readFileSync('./non-existent.json', 'utf8')
+function foo () {
+  fs.readFileSync('./important.json', 'utf8')
 }
 foo()

@@ -56,7 +56,7 @@
     "license": "license-checker --production --onlyunknown --csv",
     "pretty": "prettier-standard 'src/*.js'",
     "prelint": "npm run pretty",
-    "lint": "standard --verbose --fix src/*.js",
+    "lint": "standard --verbose --fix src/*.js examples/**/*.js",
     "pretest": "npm run lint",
     "secure": "nsp check",
     "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";",

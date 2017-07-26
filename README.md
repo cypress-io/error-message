@@ -97,6 +97,10 @@ foo()
   })
 ```
 
+## Examples
+
+* Reading a file [before](examples/simple/index.js) and [after](examples/simple/after.js)
+
 ### Small print
 
 Support: if you find any problems with this module, email / tweet /
